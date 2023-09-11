@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+  background-color: hsl(234, 29%, 20%);
+  place-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  border: 3px solid white;
+  padding: 1.25rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 6%;
+  gap: 0.5rem;
+  overflow: hidden; /* Hide any content that overflows the parent */
+  position: relative;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+.text-action {
+  height: 100%;
+  /* border: 5px solid red; */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  max-height: 100%;
+}
+.text-action h1 {
+  font-size: max(2rem, 3.5vw);
+  margin-bottom: 1rem;
+}
+.point {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: -1rem;
+}
+
+img {
+  max-width: 100%;
+
+  height: auto;
+  /* display: block; */
+}
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.email {
+  max-width: min(40vw, 90%);
+  height: 4vh;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+input {
+  color: black;
+  font-size: 1rem;
+}
+.email-lbl {
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+.submit-btn {
+  margin-top: 1rem;
+  max-width: min(40vw, 90%);
+  margin-bottom: min(2rem, 10vh);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    display: block;
+  }
+}
