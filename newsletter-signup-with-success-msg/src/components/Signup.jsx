@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./signup.css";
 import { useState } from "react";
+import sideImg from "../assets/images/illustration-sign-up-desktop.svg";
+import icon from "../assets/images/icon-list.svg";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -27,15 +29,15 @@ function Signup() {
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <div className="points">
             <div className="point">
-              <img src="src\assets\images\icon-list.svg" alt="success" />
+              <img src={icon} alt="success" />
               <p>Product discovery and building what matters</p>
             </div>
             <div className="point">
-              <img src="src\assets\images\icon-list.svg" alt="success" />
+              <img src={icon} alt="success" />
               <p>Measuring to ensure updates are a success</p>
             </div>
             <div className="point">
-              <img src="src\assets\images\icon-list.svg" alt="success" />
+              <img src={icon} alt="success" />
               <p>And much more!</p>
             </div>
           </div>
@@ -65,11 +67,7 @@ function Signup() {
           </form>
         </div>
         <div className="img-wrapper">
-          <img
-            src="src\assets\images\illustration-sign-up-desktop.svg"
-            alt="svg image"
-            className="img"
-          />
+          <img src={sideImg} alt="svg image" className="img" />
         </div>
       </div>
     </div>

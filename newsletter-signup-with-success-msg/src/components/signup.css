@@ -5,10 +5,10 @@
 body {
   margin: 0 auto;
   padding: 2rem;
-  /* text-align: center; */
   background-color: hsl(234, 29%, 20%);
   place-content: center;
 }
+
 .container {
   display: grid;
   grid-template-columns: 55% 45%;
@@ -20,22 +20,24 @@ body {
   gap: 0.5rem;
   overflow: hidden; /* Hide any content that overflows the parent */
   position: relative;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
 .text-action {
   height: 100%;
-  /* border: 5px solid red; */
   color: black;
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem;
   max-height: 100%;
 }
+
 .text-action h1 {
   font-size: max(2rem, 3.5vw);
   margin-bottom: 1rem;
 }
+
 .point {
   display: flex;
   align-items: center;
@@ -45,15 +47,15 @@ body {
 
 img {
   max-width: 100%;
-
   height: auto;
-  /* display: block; */
 }
+
 .call-to-action {
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
 }
+
 .email {
   max-width: min(40vw, 90%);
   height: 4vh;
@@ -61,14 +63,17 @@ img {
   border: 1px solid gray;
   border-radius: 10px;
 }
+
 input {
   color: black;
   font-size: 1rem;
 }
+
 .email-lbl {
   font-weight: bold;
   margin-top: 1.5rem;
 }
+
 .submit-btn {
   margin-top: 1rem;
   max-width: min(40vw, 90%);
@@ -76,12 +81,36 @@ input {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .submit-btn:hover {
   background-color: hsl(4, 100%, 67%);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
   .container {
-    display: block;
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  .text-action {
+    padding: 0 1rem;
+  }
+
+  .img-wrapper {
+    position: relative;
+    height: 30vh; /* Adjust this value to place the image at the top 30% */
+    overflow: hidden;
+  }
+
+  .img {
+    position: absolute;
+    top: 0; /* Ensure the image stays at the top */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+  .submit-btn {
+    width: 70%;
   }
 }

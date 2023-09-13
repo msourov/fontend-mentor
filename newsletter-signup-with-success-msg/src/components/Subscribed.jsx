@@ -1,16 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./subscribed.css";
+import icon from "../assets/images/icon-list.svg";
 
 function Subscribed() {
   const navigate = useNavigate();
   return (
     <div className="sub-container">
       <div className="icon">
-        <img
-          src="src\assets\images\icon-list.svg"
-          alt="success"
-          className="success-icon"
-        />
+        <img src={icon} alt="success" className="success-icon" />
       </div>
       <div className="text">
         <h1>Thanks for subscribing!</h1>
